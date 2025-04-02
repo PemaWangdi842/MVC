@@ -63,7 +63,7 @@ const indexRoutes = require('./routes/index');
 const authRoutes = require('./routes/authRoutes');
 const homeRoutes = require('./routes/homeRoutes');
 const profileRoutes = require('./routes/profileRoutes');
-
+const bookRoutes = require("./routes/bookRoutes");
 
 //load environment variables
 dotenv.config();
@@ -102,6 +102,7 @@ app.use('/', indexRoutes);
 app.use('/auth', authRoutes);
 app.use('/', homeRoutes);
 app.use('/', profileRoutes);
+app.use("/", bookRoutes);
 
 
 //for db connection
